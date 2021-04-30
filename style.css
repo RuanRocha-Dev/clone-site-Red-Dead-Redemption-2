@@ -1,0 +1,367 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    font-family: chineser;
+    text-decoration: none;
+}
+
+body{
+    background-color: #000;
+}
+
+@font-face {
+	font-family: chineser;
+	src: url(CHINESER.TTF);
+}
+
+.all{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+    filter: blur(5px);
+    opacity: .2;
+    transition: all 1s;
+}
+
+
+.cabecalho{background-color: black;
+    width: 100vw;
+    height: 40px;
+    position: fixed;
+    flex-direction: row;
+    justify-content: space-between;
+    z-index: 20;
+}
+.menuEsquerdo{
+    width: 310px;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 160%;
+    color: #fff;
+}
+
+.menuEsquerdo p:hover{
+    color: #CC0411;
+}
+
+.hamburguer{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 1.5rem;
+    height: 1.5rem;
+    z-index: 10;
+    left: .5%;
+    cursor: pointer;
+}
+
+.line{
+    width: 100%;
+    height: .1rem;
+    background-color: #fff;
+    box-shadow: 0.1rem 0.1rem 1px #000;
+    transition: transform 1s;
+}
+
+.buy{
+    background-color: #CC0411;
+    color: #000;
+    width: 140px;
+    height: 98%;
+    font-size: 160%;
+}
+
+.buy:hover{
+    color: #fff;
+}
+
+.sidebar{
+    background-color: rgba(0, 0, 0, .7);
+    width: 20rem;
+    height: 100%;
+    left: -20rem;
+    position: fixed;
+    transition: 1s ease;
+    z-index: 10;
+}
+
+.sidebar ul{
+    width: 100%;
+    height: 92%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 1.6rem;
+    border-bottom: 2px solid #fff;
+}
+
+.sidebar ul li a{
+    color: #fff;
+    opacity: 1;
+}
+
+.sidebar ul li a:hover{
+    color: #CC0411;
+}
+
+.suport{
+    width: 100%;
+    height: 7%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.suport p{
+    cursor: pointer;
+    color: rgb(117, 115, 115);
+}
+
+.suport p:hover{
+    color: #fff;
+}
+
+.home{
+    width: 100%;
+    height: 100vh;
+}
+
+.imgBackGround{
+    width: 100%;
+    height: 100vh;
+}
+
+.imgBackGround img{
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+}
+
+.history{
+    position: absolute;
+    color: #fff;
+    width: 45%;
+    left: 30%;
+    top: 105%;
+    font-size: 1.5rem;
+    line-height: 1.7rem;
+    letter-spacing: 0.1rem;
+}
+
+.primary{
+    width: 100%;
+    margin-top: 20%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.review{
+    width: 33%;
+    height: 750px;
+    color: #fff;
+    text-align: center;
+    font-size: 2.7rem;
+    line-height: 6rem;
+    cursor: pointer;
+}
+
+.review:hover{
+    color: #CC0411;
+}
+
+.review img{
+    width: 95%;
+    height: 80%;
+    object-fit: cover;
+    transition: .8s ease;
+}
+
+.review img:hover{
+    width: 97%;
+    height: 82%;
+    opacity: 0.7;
+}
+
+footer{
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    line-height: 4rem;
+}
+
+.imgFooter{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.imgfooter img{
+    width: 100%;
+    height: 100%;
+}
+
+.channel{
+    position: absolute;
+    color: #fff;
+}
+
+.channel h2{
+    font-size: 3.5rem;
+}
+
+.channel p{
+    font-size: 1.5rem;
+}
+
+.channel button{
+    width: 200px;
+    height: 40px;
+    font-size: 1.2rem;
+    background-color: #CC0411;
+    opacity: .7;
+    cursor: pointer;
+}
+
+.channel button:hover{
+    opacity: 1;
+}
+
+.social-media{
+    width: 25%;
+    margin-top: 15rem;
+    position: absolute;
+    color: #fff;
+    font-size: 2rem;
+}
+
+.social-media ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.social-media ul li a{
+    color: #CC0411;
+    opacity: .8;
+}
+
+.social-media ul li a:hover{
+    opacity: 1;
+}
+
+@media screen and (max-width: 800px){
+    .history{
+        width: 90%;
+        left: 2%;
+        top: 90%;
+    }
+    .primary{
+        flex-direction: column;
+        flex-wrap: nowrap;
+        overflow: hidden;
+    }
+    .review{
+        width: 70%;
+        height: 600px;
+        line-height: 4rem;
+    }
+    .social-media{
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 400px){
+    .menuEsquerdo{
+        width: 200px;
+        font-size: 110%;
+    }
+    .hamburguer{
+        width: 1rem;
+        height: 1rem;
+    }
+    .buy{
+        width: 100px;
+        height: 90%;
+        font-size: 110%;
+    }
+    .history{
+        width: 90%;
+        left: 3%;
+        top: 90%;
+        font-size: 1rem;
+        text-align: center;
+    }
+    .primary{
+        margin-top: 100%;
+    }
+    .review{
+        width: 85%;
+        height: 500px;
+        font-size: 2rem;
+    }
+    .channel h2{
+        font-size: 3rem;
+    }
+    
+    .channel p{
+        font-size: 1.1rem;
+    }
+    
+    .channel button{
+        width: 180px;
+        height: 38px;
+        font-size: 1.1rem;
+        background-color: #CC0411;
+        opacity: .7;
+        cursor: pointer;
+    }
+    .social-media{
+        width: 70%;
+        font-size: 1.7rem;
+    }
+    .social-media ul{
+        justify-content: space-between;
+    }
+}
+
+@media screen and (max-width: 300px){
+    .menuEsquerdo{
+        width: 170px;
+        font-size: 100%;
+    }
+    .hamburguer{
+        width: 1rem;
+        height: 1rem;
+    }
+    .buy{
+        width: 70px;
+        height: 70%;
+        font-size: 100%;
+    }
+    .sidebar{
+        width: 17rem;
+    }
+    .primary{
+        margin-top: 160%;
+    }
+    .social-media{
+        margin-top: 20rem;
+    }
+}
